@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { useDispatch } from 'react-redux';
+
 import { ActivityIndicator } from 'react-native';
 
 import { 
@@ -17,7 +19,10 @@ import { InputText } from '../../components/InputText';
 
 import { backgroud_SingIn } from '../../assets';
 
+import { setLogin } from '../../store/modules/auth/actions';
+
 export function SingIn({ navigation }: any) {
+  const dispatch = useDispatch();
   const [loading, setLoading] = useState<boolean>(false);
 
   return (
@@ -39,7 +44,8 @@ export function SingIn({ navigation }: any) {
             setLoading(true);
 
             setTimeout(() => {
-              navigation.navigate('Feed')
+              setLoading(false);
+              dispatch(setLogin(true));
             }, 5000)
           }}
         >

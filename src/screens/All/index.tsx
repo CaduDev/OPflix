@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Container, Content, Text } from './styles';
 
-export function SingOut(){
+export function All() {
   return (
     <Container>
       <Content>
-        <Text>Deslogar</Text>
+        <Text>Todos</Text>
       </Content>
     </Container>
   );
