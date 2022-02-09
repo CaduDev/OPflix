@@ -84,10 +84,13 @@ export default function App() {
             initialRouteName="Início" 
             drawerContent={customDrawerContent}
             screenOptions={{
-              header: () => <Header />
+              header: () => <Header />,
             }}>
             <Drawer.Screen name="Conta" component={Account} /> 
-            <Drawer.Screen name="Início" component={Feed} /> 
+            <Drawer.Screen 
+              name="Início" 
+              component={Feed}  
+            /> 
             <Drawer.Screen name="Pesquisa" component={Search} /> 
             <Drawer.Screen name="Todos capítulo" component={All} /> 
             <Drawer.Screen name="Todos episódios" component={All} /> 
