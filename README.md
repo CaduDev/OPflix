@@ -13,7 +13,9 @@
 - [react-native] - React is an open source JavaScript library focused on creating user interfaces on android and ios. It is maintained by Facebook, Instagram, other companies.
 - [styled-components] - Style permitem que você escreva CSS real em seu JavaScript
 - [Expo] - Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React
+
 ##
+
 <div>
   <div>
     <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
@@ -23,7 +25,9 @@
     <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white">
   </div>
 </div>
+
 ##
+
 <div style="display:flex;">
 	<img src="https://i.imgur.com/oyXeQou.jpg" width="24%">
 	<img src="https://i.imgur.com/RTZDdLB.jpg" width="24%">
