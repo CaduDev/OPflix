@@ -14,6 +14,19 @@
 - [styled-components] - Style permitem que você escreva CSS real em seu JavaScript
 - [Expo] - Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React
 
+<div>
+  <div>
+    <h3>Front-end</h3>
+    <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
+	<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white">
+    <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
+    <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white">
+    <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white">
+  </div>
+  <hr>
+
+</div>
+
 <div style="display:flex;">
 	<img src="https://i.imgur.com/oyXeQou.jpg" width="24%">
 	<img src="https://i.imgur.com/RTZDdLB.jpg" width="24%">
