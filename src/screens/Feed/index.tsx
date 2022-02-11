@@ -19,6 +19,7 @@ import {
 
 import { c1010, c1011, c1012, c1013, c1014, c1015, c1016, c1017, thumb_movie, destaque } from '../../assets';
 
+import { Header } from '../../components/Header';
 
 import { Screen1 } from './Components/Screen1';
 import { Screen2 } from './Components/Screen2';
@@ -79,7 +80,7 @@ import { Screen3 } from './Components/Screen3';
 //   }
 // }
 
-export function Feed() {
+export function Feed(props: any) {
   const manga_list:Array<Object> = [
     {
       id: 1,
@@ -205,9 +206,9 @@ export function Feed() {
   function renderItem({ item }: any) {
     switch(item.type) {
       case 1:
-        return <Screen1 item={item} />
+        return <Screen1 item={item} navigation={props.navigation} />
       case 2:
-        return <Screen2 item={item} />
+        return <Screen2 item={item} navigation={props.navigation} />
       case 3:
         return <Screen3 item={item} />
       default:
@@ -217,6 +218,7 @@ export function Feed() {
 
   return (
     <Container>
+      <Header />
       <FlatList
         data={manga_list}
         renderItem={renderItem}

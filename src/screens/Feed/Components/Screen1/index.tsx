@@ -16,7 +16,7 @@ import {
   Icon
 } from './styles';
 
-export function Screen1({ item }: ItemProps) {
+export function Screen1({ item, navigation }: ItemProps) {
   const [title, setTitle] = useState<String>('');
   const [subTitle, setSubTitle] = useState<String>('');
 
@@ -45,7 +45,11 @@ export function Screen1({ item }: ItemProps) {
           <Icon name="plus" size={22} color="#fff" />
           <TextButton size={18}>Minha lista</TextButton>
         </Button>
-        <Button direction={'row'} background={"#fff"}>
+        <Button 
+          direction={'row'} 
+          background={"#fff"}
+          onPress={() => navigation.navigate('video')}
+        >
           <Icon name="play" size={22} color="#000" />
           <TextButton color={"#000"} style={{ marginLeft: 4}} size={18}>Play</TextButton>
         </Button>

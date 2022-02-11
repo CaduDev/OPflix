@@ -11,15 +11,31 @@ export const Container = styled.View`
   margin-top: 50px;
 `;
 
+export const ContainerHeader = styled.View`
+  width: 100%;
+  margin-top: 20px;
+  padding-horizontal: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 export const Title = styled.Text`
   font-size: 22px;
   font-weight: 700;
   color: #fff;
-  margin-top: 20px;
-  margin-left: 20px;
-  height: 40px;
-  width: 100%;
 `;
+
+export const All = styled.TouchableOpacity`
+
+`;
+
+export const Text = styled.Text`
+  color: #fff;
+  font-weight: 700;
+`; 
 
 export const ScrollContent = styled.ScrollView`
 `;

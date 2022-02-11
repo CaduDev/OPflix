@@ -7,6 +7,7 @@ export interface ItemProps {
     id_epidosio: Number;
     capa: Array<Object>;
   }
+  navigation: any
 }
 
 export interface ButtonProps {

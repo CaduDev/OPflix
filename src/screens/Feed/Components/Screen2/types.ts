@@ -4,7 +4,8 @@ export interface ItemProps {
     type: Number;
     title: String;
     data: Array<Object>;
-  }
+  },
+  navigation: any
 }
 
 export interface ContentProps {

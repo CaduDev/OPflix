@@ -4,7 +4,7 @@ import { Feather } from '@expo/vector-icons';
 
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 
-export const Container = styled.View`
+export const Container = styled.SafeAreaView`
   width: 100%;
   height: 80px;
   background: transparent;
@@ -13,6 +13,7 @@ export const Container = styled.View`
   justify-content: space-between;
   flex-direction: row;
   padding: 12px;
+  z-index: 9999;
 `;
 
 export const Content = styled.View`

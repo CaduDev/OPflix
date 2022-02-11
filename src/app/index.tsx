@@ -21,6 +21,7 @@ import { SingIn } from '../screens/SingIn';
 import { Home } from '../screens/Home';
 import { Feed } from '../screens/Feed';
 import { Configuration } from '../screens/Configuration';
+import { VideoScreen } from '../screens/VideoScreen';
 
 // import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -47,8 +48,34 @@ const showMenu: Array<Object> = [
 ]
 
 export default function App() {
-  const isSingIn = useSelector(state => state.auth.logged);
   const reduxDispatch = useDispatch();
+  
+  const isSingIn:boolean = useSelector((state): any => state.auth.logged);
+
+  function Home_StackNavigator(props) {
+    return (
+      <Stack.Navigator
+        initialRouteName="First"
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen 
+          name="First" 
+          component={Feed}
+          
+        />
+        <Stack.Screen 
+          name="video" 
+          component={VideoScreen} 
+          options={{
+            headerShown: false,
+            
+          }}
+        />
+      </Stack.Navigator>
+    )
+  }
 
   function customDrawerContent(props: DrawerContentComponentProps, dispatch: any){
     return (
@@ -80,21 +107,24 @@ export default function App() {
       <StatusBar />
       {isSingIn ? (
         <NavigationContainer>
+          <Drawer.Screen name="Conta" component={Account} /> 
           <Drawer.Navigator 
             initialRouteName="Início" 
             drawerContent={customDrawerContent}
             screenOptions={{
               header: () => <Header />,
             }}>
-            <Drawer.Screen name="Conta" component={Account} /> 
             <Drawer.Screen 
               name="Início" 
-              component={Feed}  
+              component={Home_StackNavigator} 
+              options={{
+                headerShown: false
+              }} 
             /> 
             <Drawer.Screen name="Pesquisa" component={Search} /> 
             <Drawer.Screen name="Todos capítulo" component={All} /> 
             <Drawer.Screen name="Todos episódios" component={All} /> 
-            <Stack.Screen name="Configuração" component={Configuration} /> 
+            <Stack.Screen name="Configuração" component={Configuration} />
           </Drawer.Navigator>
         </NavigationContainer>
       ): (

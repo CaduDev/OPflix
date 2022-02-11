@@ -4,21 +4,29 @@ import { Dimensions } from 'react-native';
 
 import { 
   Container, 
+  ContainerHeader,
   Title, 
+  All,
+  Text,
   ScrollContent, 
   Content,
   Capa,
-  TitleEpisode
+  TitleEpisode,
 } from './styles';
 
 const { width: screenWidth } = Dimensions.get('window')
 
 import { ItemProps } from '../Screen2/types';
 
-export function Screen2({ item }: ItemProps) {
+export function Screen2({ item, navigation }: ItemProps) {
   return (
     <Container>
-      <Title>{item.title}</Title>
+      <ContainerHeader>
+        <Title>{item.title}</Title>
+        <All onPress={() => navigation.navigate('Todos capítulo')}>
+          <Text>Ver todos</Text>
+        </All>
+      </ContainerHeader>
       <ScrollContent horizontal={true} removeClippedSubviews={true}>
         {item.data.map((res: any, index: number) => {
           const width = res.type===1 && res.colored? 
